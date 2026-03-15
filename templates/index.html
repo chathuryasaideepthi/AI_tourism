@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tourism AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="/static/style.css">
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <h2>AI Tourism Planner</h2>
+
+  <label>Choose Interest:</label>
+  <select id="interest">
+    <option value="heritage">Historical</option>
+    <option value="religion">Religious</option>
+    <option value="natural">Nature</option>
+    <option value="tourism.museum">Museums</option>
+    <option value="tourism.attraction">General Attractions</option>
+  </select>
+
+  <br><br>
+  <input type="text" id="placeQuery" placeholder="Search city (e.g. Delhi)">
+  <button onclick="searchByText()">Search</button>
+  <button onclick="useLocation()">Use My Location</button>
+
+  <h3>Suggested Places</h3>
+  <div id="placesList"></div>
+
+  <label>Choose Transport:</label>
+  <select id="transport">
+    <option value="car">Car</option>
+    <option value="bus">Bus</option>
+    <option value="train">Train</option>
+    <option value="flight">Flight</option>
+  </select>
+
+  <br><br>
+  <button onclick="getRoute()">Get Route</button>
+
+  <h3>Map</h3>
+  <div id="map" style="height:500px;"></div>
+
+  <div id="routeInfo" style="margin-top:20px;"></div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
